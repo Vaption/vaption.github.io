@@ -1,2 +1,168 @@
 <!DOCTYPE html>
-<p>hi</p>
+<html>
+<head>
+  <title>Vaption Github Repositories</title>
+  <link rel="icon" type="image/x-icon" href=".github/images/favicon.ico">
+  <style>
+    @font-face{
+    font-family:panton;
+    font-style:normal;
+    font-weight:390;
+    src:local('Panton Narrow'),url(https://fonts.cdnfonts.com/s/14592/PantonNarrowDemoBlack.woff) format('woff')
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Panton, Arial, sans-serif;
+      background-color: white;
+    }
+
+    .container {
+      background: linear-gradient(to bottom right, #4b0082, #000000);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 55%;
+      height: 53%
+    }
+
+    .image-handling {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      margin-bottom: -10px;
+    }
+
+    .box {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      flex: 1;
+      min-width: 210px;
+      max-width: 220px;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .github {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      color: rgba(255, 255, 255, 0.752);
+      display: flex;
+      font-size: 12px;
+      text-decoration: none;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-style: italic;
+    }
+
+    .github img {
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+    }
+    
+    .github span {
+      position: relative;
+    }
+
+    .github span::before {
+      content: "Click to visit my GitHub profile";
+      position: absolute;
+      bottom: 100%;
+      text-align: center;
+      width: 170px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .prevent-selection {
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
+    }
+
+    .github:hover span::before {
+      opacity: 1;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+    
+    a:hover {
+      color: white;
+    }
+    
+    .box p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="overlay">
+      <a href="https://github.com/Vaption/LunarClientTools" draggable="false" target="_blank" class="box">
+        <img class="prevent-selection" src=".github/images/lunar-client-tools.png" draggable="false" alt="Lunar Client Tools Logo" class="image-handling" style="width: 150px; height: 150px;">
+        <h2 class="prevent-selection">Lunar Client Tools</h2>
+        <p class="prevent-selection">Simple batch script to automate simple Lunar Client tasks</p>
+      </a>
+
+      <a href="https://github.com/Vaption/LunarClientProfiles" draggable="false" target="_blank" class="box">
+        <img class="prevent-selection" src=".github/images/lunar-client-profiles.png" draggable="false" alt="Lunar Client Profiles Logo" class="image-handling" style="width: 150px; height: 150px;">
+        <h2 class="prevent-selection">Lunar Client Profiles</h2>
+        <p class="prevent-selection">Public archive for Lunar Client profiles found on the internet</p>
+      </a>
+
+      <a target="_blank" class="box">
+        <img class="prevent-selection" src=".github/images/question-mark.png" draggable="false" alt="Question Mark PNG" class="image-handling" style="width: 150px; height: 150px;">
+        <h2 class="prevent-selection">Soon...</h2>
+      </a>
+    </div>
+  </div>
+
+  <a href="https://github.com/Vaption" draggable="false" target="_blank" class="github">
+    <img class="prevent-selection" src=".github/images/github.png" draggable="false" alt="GitHub Icon">
+    <span class="prevent-selection">/Vaption</span>
+  </a>
+
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script>
+    ScrollReveal().reveal('.overlay', { delay: 200 });
+    ScrollReveal().reveal('.github', { delay: 200 });
+    ScrollReveal().reveal('.box', { delay: 200 });
+  </script>
+</body>
+</html>
